@@ -9,7 +9,7 @@ def main():
     rate = get_bitcoin_rate(coin_data)
     bitcoin = user_input()
 
-    usDollars = round(get_conversion(bitcoin, rate),2)
+    usDollars = round(get_dollars(bitcoin, rate),2)
 
 
     print('\n***Results***')
@@ -18,7 +18,7 @@ def main():
 def get_bitcoin_rate(data):
     return data['bpi']['USD']['rate_float']
 
-def get_conversion(bitcoin, rate):
+def get_dollars(bitcoin, rate):
     return bitcoin * rate
 
 def user_input():
